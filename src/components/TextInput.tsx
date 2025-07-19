@@ -4,20 +4,27 @@ import { InputHTMLAttributes } from "react";
 
 type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   label: string;
+  showLabel?: boolean;
   error?: string;
   className?: never;
 };
 
 export const TextInput = ({
   label,
+  showLabel = true,
   type,
   placeholder,
   error,
   ...props
 }: InputProps) => {
   return (
-    <div className="flex flex-col gap-1.5 pb-2 relative">
-      <label className="text-description" htmlFor={label}>
+    <div className="flex flex-col gap-1.5 pb-2 relative w-full">
+      <label
+        className={clsx("text-description", {
+          "sr-only": !showLabel,
+        })}
+        htmlFor={label}
+      >
         {label}
       </label>
       <input

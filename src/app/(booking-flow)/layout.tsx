@@ -16,6 +16,11 @@ export default function FormLayout({
       email: "",
       phone: "",
       reasonForVisit: "",
+      cardNumber: "",
+      expiryDate: "",
+      cvv: "",
+      billingZipCode: "",
+      cancelationPolicy: false,
     },
   });
 
@@ -23,11 +28,9 @@ export default function FormLayout({
     <FormProvider {...methods}>
       <div className="flex flex-col gap-4 items-center justify-center lg:justify-start bg-gray-20 p-4 lg:py-15 lg:px-30 min-h-screen">
         <h1 className="text-lg font-bold lg:hidden">Book appointment</h1>
-        <div className="w-full flex max-w-6xl">
-          <div className="flex flex-col gap-4 lg:flex-row md:items-center lg:items-start justify-between w-full">
-            <SpaInfoCard spaCenter={mockSpaCenter} />
-            <div className="w-full pb-26">{children}</div>
-          </div>
+        <div className="flex flex-col gap-4 lg:flex-row md:items-center lg:items-start justify-between w-full max-w-6xl">
+          <SpaInfoCard spaCenter={mockSpaCenter} />
+          <div className="w-full pb-26">{children}</div>
         </div>
       </div>
     </FormProvider>

@@ -13,12 +13,10 @@ export const TextInput = ({
   type,
   placeholder,
   error,
-  onChange,
-  value,
   ...props
 }: InputProps) => {
   return (
-    <div className="flex flex-col gap-1.5 box-border">
+    <div className="flex flex-col gap-1.5 pb-2 relative">
       <label className="text-description" htmlFor={label}>
         {label}
       </label>
@@ -27,7 +25,7 @@ export const TextInput = ({
         type={type}
         placeholder={placeholder}
         className={clsx(
-          "border-1.5 rounded-xl p-3 focus:outline-none flex focus-visible:ring-1.5",
+          "border-1.5 rounded-xl p-3 focus:outline-none flex focus-visible:ring-1.5 placeholder:text-additional",
           {
             "border-gray-50 focus-visible:border-violet-90 focus-visible:ring-violet-90 hover:border-violet-90":
               !error,
@@ -35,11 +33,13 @@ export const TextInput = ({
               error,
           }
         )}
-        onChange={onChange}
-        value={value}
         {...props}
       />
-      {error && <p className="text-red-600 text-sm text-right">{error}</p>}
+      {error && (
+        <p className="text-red-600 text-sm text-right absolute -bottom-4 right-0">
+          {error}
+        </p>
+      )}
     </div>
   );
 };

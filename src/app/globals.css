@@ -10,10 +10,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-nunito-sans);
   --font-mono: var(--font-nunito-mono);
+  
   --color-gray-20: #f5f5f5;
   --color-gray-30: #E3E3E8;
-  --color-additional: #888896;
   --color-violet-90: #8A1D96;
+  
+  --color-additional: #888896;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,5 +28,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-nunito-sans);
 }

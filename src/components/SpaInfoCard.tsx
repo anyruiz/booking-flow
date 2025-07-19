@@ -26,7 +26,7 @@ export const SpaInfoCard = ({
   logo,
 }: InfoCardProps) => {
   return (
-    <div className="bg-white rounded-lg border border-gray-30 p-4 flex flex-col gap-4 w-full max-w-md">
+    <div className="bg-white rounded-xl border border-gray-30 p-4 flex flex-col gap-4 w-full max-w-md">
       <div className="flex flex-col items-center gap-4">
         <div className="rounded-full w-20 h-20 border border-gray-20 overflow-hidden">
           <Image

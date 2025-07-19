@@ -17,7 +17,7 @@
   --color-violet-90: #8A1D96;
   
   --color-additional: #888896;
-  --color-description: #60606;
+  --color-description: #60606C;
 
   --border-width-1.5: 1.5px;
   --ring-width-1.5: 1.5px;
@@ -33,5 +33,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-nunito-sans);
 }

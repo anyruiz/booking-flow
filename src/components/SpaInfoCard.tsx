@@ -1,35 +1,18 @@
-import Image, { StaticImageData } from "next/image";
-
-type Location = {
-  streetAddress: string;
-  room?: string;
-  suite: string;
-  city: string;
-  zipCode: string;
-  stateCode: string;
-};
+import { SpaCenter } from "@/types";
+import Image from "next/image";
 
 type InfoCardProps = {
-  name: string;
-  address: Location;
-  email: string;
-  phone: string;
-  logo: StaticImageData;
+  spaCenter: SpaCenter;
 };
 
-export const SpaInfoCard = ({
-  name,
-  address,
-  email,
-  phone,
-  logo,
-}: InfoCardProps) => {
+export const SpaInfoCard = ({ spaCenter }: InfoCardProps) => {
+  const { name, address, email, phone, logoUrl } = spaCenter;
   return (
-    <div className="bg-white rounded-lg border border-gray-30 p-4 flex flex-col gap-4 w-full max-w-md">
+    <div className="bg-white rounded-xl border border-gray-30 p-4 flex flex-col gap-4 w-full max-w-md">
       <div className="flex flex-col items-center gap-4">
         <div className="rounded-full w-20 h-20 border border-gray-20 overflow-hidden">
           <Image
-            src={logo}
+            src={logoUrl}
             alt=""
             width={768}
             height={591}

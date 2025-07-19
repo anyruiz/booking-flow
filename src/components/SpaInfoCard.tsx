@@ -1,4 +1,3 @@
-"use client";
 import { SpaCenter } from "@/types";
 import Image from "next/image";
 

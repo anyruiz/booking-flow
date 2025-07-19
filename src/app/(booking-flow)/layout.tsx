@@ -16,6 +16,11 @@ export default function FormLayout({
       email: "",
       phone: "",
       reasonForVisit: "",
+      cardNumber: "",
+      expiryDate: "",
+      cvv: "",
+      billingZipCode: "",
+      cancelationPolicy: false,
     },
   });
 

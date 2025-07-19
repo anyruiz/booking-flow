@@ -21,7 +21,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="bg-white rounded-xl border border-gray-30 p-4 md:py-12 md:px-15 flex flex-col gap-4 w-full "
+      className="bg-white rounded-xl border border-gray-30 p-4 md:py-12 md:px-15 flex flex-col gap-4 w-full"
     >
       <h2 className="text-lg font-bold">Enter your details below</h2>
       <TextInput

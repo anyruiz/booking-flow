@@ -1,29 +1,15 @@
-import { SpaInfoCard } from "@/components/SpaInfoCard";
-import logo from "@/assets/logo.png";
-import { SpaCenter } from "@/types";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans flex flex-col items-center justify-items-center min-h-screen p-4">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start w-full">
-        <h1 className="text-lg font-bold">Book appointment</h1>
-        <SpaInfoCard spaCenter={mockSpaCenter} />
+    <div className="flex items-center justify-center min-h-screen p-4 w-screen">
+      <main className="flex flex-col gap-8 items-center w-full">
+        <h1 className="text-4xl font-bold">Booking flow project</h1>
+        <p>By Any Ruiz</p>
+        <Link className="text-violet-90" href="/contact">
+          Book appointment with <span className="font-bold">Gold Spa</span>
+        </Link>
       </main>
     </div>
   );
 }
-
-const mockSpaCenter: SpaCenter = {
-  name: "Gold Spa",
-  email: "goldspa@gmail.com",
-  phone: "123-456-7890",
-  logoUrl: logo.src,
-  address: {
-    streetAddress: "2525 Camino del Rio S",
-    suite: "Suite 315",
-    room: "Room 8",
-    city: "San Diego",
-    zipCode: "92108",
-    stateCode: "CA",
-  },
-};

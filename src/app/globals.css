@@ -20,6 +20,7 @@
   
   --color-additional: #888896;
   --color-description: #60606C;
+  --color-dark: #131316;
 
   --border-width-1.5: 1.5px;
   --ring-width-1.5: 1.5px;
@@ -34,6 +35,6 @@
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--color-dark);
   font-family: var(--font-nunito-sans);
 }

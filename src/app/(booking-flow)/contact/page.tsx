@@ -30,7 +30,7 @@ export default function ContactForm() {
         })}
         label="Name"
         type="text"
-        placeholder="Enter your name"
+        placeholder="Input text"
         error={errors.name?.message?.toString()}
       />
       <TextInput
@@ -39,7 +39,7 @@ export default function ContactForm() {
         })}
         label="Email"
         type="email"
-        placeholder="Enter your email"
+        placeholder="Input text"
         error={errors.email?.message?.toString()}
       />
       <TextInput
@@ -48,7 +48,7 @@ export default function ContactForm() {
         })}
         label="Phone number"
         type="tel"
-        placeholder="Enter your phone number"
+        placeholder="Input text"
         error={errors.phone?.message?.toString()}
       />
       <TextArea
@@ -56,7 +56,7 @@ export default function ContactForm() {
           required: "Reason for visit is required",
         })}
         label="Reason for visit"
-        placeholder="Enter your reason for visit"
+        placeholder="Input text"
         error={errors.reasonForVisit?.message?.toString()}
       />
       <BottomBar>

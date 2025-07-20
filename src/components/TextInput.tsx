@@ -12,7 +12,7 @@ type InputProps = InputHTMLAttributes<HTMLInputElement> & {
 export const TextInput = ({
   label,
   showLabel = true,
-  type,
+  type = "text",
   placeholder,
   error,
   ...props

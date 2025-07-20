@@ -35,6 +35,7 @@ export default function PaymentForm() {
               {...register("cardNumber", {
                 required: "Card number is required",
               })}
+              type="number"
               placeholder="1234 1234 1234 1234"
               error={errors.cardNumber?.message?.toString()}
             />
@@ -55,6 +56,7 @@ export default function PaymentForm() {
                   showLabel={false}
                   label="CVV"
                   {...register("cvv", { required: "CVV is required" })}
+                  type="number"
                   placeholder="CVV"
                   error={errors.cvv?.message?.toString()}
                 />
@@ -67,6 +69,7 @@ export default function PaymentForm() {
             {...register("billingZipCode", {
               required: "Billing zip code is required",
             })}
+            type="number"
             placeholder="Billing zip code"
             error={errors.billingZipCode?.message?.toString()}
           />

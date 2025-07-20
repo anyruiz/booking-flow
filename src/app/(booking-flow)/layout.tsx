@@ -34,7 +34,7 @@ export default function FormLayout({
       <div className="text-dark flex flex-col gap-4 items-center justify-center lg:justify-start bg-gray-20 p-4 lg:py-15 lg:px-30 min-h-screen">
         <h1 className="text-lg font-bold lg:hidden">Book appointment</h1>
         <div
-          className={clsx("flex w-full max-w-6xl gap-4", {
+          className={clsx("flex w-full max-w-6xl gap-4 md:gap-8", {
             "flex-col lg:flex-row md:items-center lg:items-start justify-between":
               !isConfirmationPage,
             "flex-col-reverse max-w-xl": isConfirmationPage,
